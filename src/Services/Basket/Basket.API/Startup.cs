@@ -33,9 +33,10 @@ namespace Basket.API
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Basket.API", Version = "v1" });
             });
 
+          
             services.AddStackExchangeRedisCache(options => 
             {
-                options.Configuration = Configuration.GetSection("CacheSettings").GetValue<string>("ConnectionString");
+                options.Configuration = Configuration.GetSection("CacheSettings").GetValue<string>("ConnectionString"); ;
             });
 
 
